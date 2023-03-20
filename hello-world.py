@@ -476,24 +476,24 @@ Your module description
 #      print("There was a problem writing to the history file.")
 
 
-import json
+# import json
 
-try:
-    # Try to open the JSON file
-    with open('data1.json', 'r') as file:
-        # Load the data from the file
-        data = json.load(file)
-        print(f"Welcome back, {data['name']}!")
+# try:
+#     # Try to open the JSON file
+#     with open('data1.json', 'r') as file:
+#         # Load the data from the file
+#         data = json.load(file)
+#         print(f"Welcome back, {data['name']}!")
         
-except IOError:
-    # If the file does not exist, ask the user for a name
-    name = input("Please enter your name: ")
-    data = {"name": name}
+# except IOError:
+#     # If the file does not exist, ask the user for a name
+#     name = input("Please enter your name: ")
+#     data = {"name": name}
     
-    # Write the data to a new JSON file
-    with open('data1.json', 'w') as file:
-        json.dump(data, file)
-        print(f"Welcome, {name}! Your name has been saved.")
+#     # Write the data to a new JSON file
+#     with open('data1.json', 'w') as file:
+#         json.dump(data, file)
+#         print(f"Welcome, {name}! Your name has been saved.")
 
 #---------------
 # import os

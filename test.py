@@ -56,16 +56,16 @@ Your module description
 
 
 
-var1 = 0
-print(var1)
-var1 += 10
-if var1 == 10:
-    print("Yep its 10")
-else:
-    print("nope")
-var1 = var1 + 1
-print(var1)
-var1 -= 1
-print(var1)
+# var1 = 0
+# print(var1)
+# var1 += 10
+# if var1 == 10:
+#     print("Yep its 10")
+# else:
+#     print("nope")
+# var1 = var1 + 1
+# print(var1)
+# var1 -= 1
+# print(var1)
 
 
