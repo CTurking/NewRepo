@@ -275,15 +275,17 @@ Your module description
 # else:
 #     print("it is equal to 10!")
 
-names = ["charlie", "natacha", "kåre"]
+# names = ["charlie", "natacha", "kåre"]
 
-for name in names:
-    newName = name.capitalize()
-    print(newName)
+# for name in names:
+#     newName = name.capitalize()
+#     print(newName)
     
-for name in names:
-    newUpper = name.upper()
-    print(newUpper)
+# for name in names:
+#     newUpper = name.upper()  
+#     print(newUpper)
+    
+#     name.lower()
 ##
 # While loops
 #
@@ -303,17 +305,35 @@ for name in names:
 
 # fruits = ["apple", "banana", "cherry"]
 # for x in fruits:
-#   if x == "banana":
-#     break
+# #   if x == "banana":
+# #     break
 #   print(x)
 
 
+# #var_1 = “this is a word set of double quotes”
+# var_2 = "this is a word set of double quotes"
+# msg1 = "I’m a message" , "more stuff"
+# print(msg1)
+# msg2 = "I’m a message" + " " + "more stuff"
+# print(msg2)
+
+
+# for x in "banana":
+#   print(x)
 # ---------------------------------
 # Functions
 
-# def greet_user(): 
+# def add_3(x):
+#   y = x + 3
+#   return y
+  
+# print(add_3(4))
+
+
+# def greetuser(): 
 #     print("Hello there!")
-# greet_user()
+    
+# greetuser()
 
 # def greet_userP(name): 
 #     print("Hello " + name)
@@ -322,25 +342,28 @@ for name in names:
 # def my_function(fname, lname):
 #   print(fname + " " + lname)
 
-# my_function("Emil", "Refsnes") 
+# my_function("Mickey", "Mouse") 
 
 # def my_function(fname, lname):
-#   print(fname + " " + lname)
+#   print(str(fname) + " " + str(lname))
 
-# my_function("Emil") 
+# my_function("lastname", "firstname") 
 
 # If you don't know HOW many arguments will arrive... *in front of the arg name
 # def my_function(*kids):
-#   print("The youngest child is " + kids[2])
+#   print("The youngest child is " + kids[-1])
 
-# my_function("Emil", "Tobias", "Linus") 
+# my_function("Emil", "Tobias","a", "b", "c", "one more not youngest kid", "Linus") 
 
 # def my_function(child3, child2, child1):
-#   print("The youngest child is " + child3)
+#   print("The youngest child is " + child3, end='')
+#   print("child 2 is " + child2 + " and child 1 is " + child1)
+#   print("child 2 is " + child2,  end='')
+#   print("child 1 is " + child1)
 
-# my_function(child1 = "Emil", child2 = "Tobias", child3 = "Linus") 
+# my_function(child3 = "Linus", child2 = "Tobias",  child1 = "Emil" ) 
 
-# default parameter value
+#default parameter value
 # def my_function(country = "Denmark"):
 #   print("I am from " + country)
 
@@ -356,6 +379,8 @@ for name in names:
 
 # fruits = ["apple", "banana", "cherry"]
 # my_function(fruits)
+# dinner = ("Chilli Con Carne", "BBQ", "Spinach")
+# my_function(dinner)
 
 # def my_function(x):
 #   return 5 * x
@@ -406,4 +431,91 @@ for name in names:
 
 # print("\n\nRecursion Example Results")
 # tri_recursion(6)
+
+# ------------------------------------------
+
+# import os 
+
+# dirs = os.listdir() 
+# print(dirs)
+# print()
+# os.mkdir("newFolder") 
+# dirs = os.listdir() 
+# print(dirs)
+# print()
+# os.rmdir("newFolder") 
+# dirs = os.listdir() 
+# print(dirs)
+# user = os.getlogin()
+# print(user)
+
+
+# Json example from book - does not work
+# ------------------------------
+# import json
+# filename = "userName.json"
+# name = ''
+# # print(filename)
+# # Check for a history file 
+# try:
+#     with open(filename, 'r') as r: # Load the user's name from the history file 
+#         name = json.load(r)
+# except IOError: 
+#     print("First-time login")
+#     # If the user was found in the history file, welcome them back 
+# if name != "": 
+#     print("Welcome back, " + name + "!")
+# else: # If the history file doesn't exist, ask the user for their name
+#     name = input("Hello! What's your name? ") 
+#     print("Welcome, " + name + "!")
+#   # Save the user's name to the history file 
+# try:
+#     with open(filename, 'w') as f: 
+#         json.dump(name, f)
+# except IOError: 
+#      print("There was a problem writing to the history file.")
+
+
+import json
+
+try:
+    # Try to open the JSON file
+    with open('data1.json', 'r') as file:
+        # Load the data from the file
+        data = json.load(file)
+        print(f"Welcome back, {data['name']}!")
+        
+except IOError:
+    # If the file does not exist, ask the user for a name
+    name = input("Please enter your name: ")
+    data = {"name": name}
+    
+    # Write the data to a new JSON file
+    with open('data1.json', 'w') as file:
+        json.dump(data, file)
+        print(f"Welcome, {name}! Your name has been saved.")
+
+#---------------
+# import os
+# import json
+
+# # Check if the file exists
+# if os.path.isfile('data.json'):
+#     # Open the JSON file
+#     with open('data.json', 'r') as file:
+#         # Load the data from the file
+#         data = json.load(file)
+#     # Print the data
+#     print(data)
+# else:
+#     # Ask the user for their name
+#     name = input('Enter your name: ')
+#     # Create a dictionary with the user's name
+#     data = {'name': name}
+#     # Open the JSON file for writing
+#     with open('data.json', 'w') as file:
+#         # Write the data to the file in JSON format
+#         json.dump(data, file)
+        
+
 
