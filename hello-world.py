@@ -385,7 +385,7 @@ Your module description
 # def my_function(x):
 #   return 5 * x
 
-# print(my_function(3))
+# print(my_function(3))  # called with 3 as a param value
 # print(my_function(5))
 # print(my_function(9)) 
 
@@ -433,6 +433,57 @@ Your module description
 # tri_recursion(6)
 
 # ------------------------------------------
+# Maths in python
+#
+import math
+
+# x = min(5, 10, 25)
+# y = max(5, 10, 25)
+
+# print("min number in x list is: ", x)
+# print("max number in y list is: ", y) 
+
+# x = pow(4, 3)
+# print(x) 
+
+# x = math.sqrt(64)
+# # print(x) 
+
+# absolute = -5.999 
+# floor_test = 198.42
+# result1 = math.fabs(absolute) 
+# result2 = math.floor(floor_test)
+# print(result1, " is the absolute value of ", absolute) 
+# print(result2, " is the floor of ", floor_test)
+
+# def div_by_zero_try(number):
+#     try:
+#         value = 5 / number
+#     except ZeroDivisionError:
+#         print('Divide by zero error')
+#         value = 9999999
+#     return value
+    
+# def div_by_zero(number):
+#     value = 5 / number
+#     return value
+  
+
+# print(div_by_zero_try(2))
+# print(div_by_zero_try(0))
+# print(div_by_zero_try(2))
+# #print(div_by_zero(0))
+# print(div_by_zero(20))
+    
+#print(div_by_zero(0))
+
+
+
+
+# ------------------------------------------
+# OS in python
+#
+
 
 # import os 
 
@@ -482,7 +533,7 @@ Your module description
 #     # Try to open the JSON file
 #     with open('data1.json', 'r') as file:
 #         # Load the data from the file
-#         data = json.load(file)
+#         data = json.load(file)  #read
 #         print(f"Welcome back, {data['name']}!")
         
 # except IOError:
@@ -492,7 +543,7 @@ Your module description
     
 #     # Write the data to a new JSON file
 #     with open('data1.json', 'w') as file:
-#         json.dump(data, file)
+#         json.dump(data, file)   #write
 #         print(f"Welcome, {name}! Your name has been saved.")
 
 #---------------
@@ -517,5 +568,28 @@ Your module description
 #         # Write the data to the file in JSON format
 #         json.dump(data, file)
         
+# ---------------------------------------
+# pip installer
+# --------------------------------------
+# The requests library is the de facto standard for making HTTP requests in Python. 
+# It abstracts the complexities of making requests behind a beautiful, simple API so 
+# that you can focus on interacting with services and consuming data in your application.
+#  https://realpython.com/python-requests/
 
 
+# in a terminal window run 
+# pip show requests
+# pip install requests 
+
+# f-strings - they are your friend.  :-)
+
+# name = "Eric"
+# age = 74
+# print(f"Hello, {name}. You are {age}.")
+
+
+# tup = (1, 2, 4, 8)
+# tup = tup[-2:-1]
+# print(tup)
+# tup = tup([1])
+# print(tup)

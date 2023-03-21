@@ -93,3 +93,11 @@ Your module description
 # print(myDict[3])
 # for key, value in myDict.items(): 
 #     print(key, value)
+
+# msg = "The answer is: "
+# try:
+#     msg = msg + 12
+# except TypeError:
+#     print('I cannot add a non-string to a string')
+    
+# print(msg)
