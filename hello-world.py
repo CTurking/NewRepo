@@ -406,18 +406,18 @@ Your module description
 # Each successive number is found by adding up the two numbers before it. 
 # Here is how we compute the Fibonacci sequence in Python using a recursive function.
 
-# def fibonacci(n):
-#     if n <= 1:
-#         return n
-#     else:
-#         return fibonacci(n - 1) + fibonacci(n - 2)
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
 
 
-# number = 14
+number = 14
 
-# print('Fibonacci sequence:')
-# for i in range(number):
-#     print(fibonacci(i))
+print('Fibonacci sequence:')
+for i in range(number):
+    print(fibonacci(i))
 
 
 
@@ -435,7 +435,7 @@ Your module description
 # ------------------------------------------
 # Maths in python
 #
-import math
+# import math
 
 # x = min(5, 10, 25)
 # y = max(5, 10, 25)
@@ -585,11 +585,64 @@ import math
 
 # name = "Eric"
 # age = 74
-# print(f"Hello, {name}. You are {age}.")
+# shoesize = 9
+# print(f"Hello, {name}. You are {age}. And your shoesize is {shoesize}" )
+# print("Hello, {name}. You are {age}.And your shoesize is {shoesize}")
+# print("Hello", name,". You are", age, ". And your shoesize is", shoesize, end='')
+
+#------------------------------
+# debugging
+#-------------------------------
+
+# # # Python program with 2 errors 
+# var = "Double Value" 
+# sumvalue = (var , 4)
 
 
-# tup = (1, 2, 4, 8)
-# tup = tup[-2:-1]
-# print(tup)
-# tup = tup([1])
-# print(tup)
+# def dosomething(valuetocheck): 
+#     if valuetocheck > 4: 
+#         print("Bad indent")
+
+# dosomething(5)
+
+# def logage(age):
+#     assert (age <= 0), "Age must be greater than 0"
+#     if age == 5:
+#         print("yay")
+
+# logage(0)
+# logage(5)
+
+#print(var, 4)
+
+# Ask the user for a value and confirm the supplied value is greater than 0
+# def checkvalue(valuetocheck): 
+#     assert (type(valuetocheck) is int), "You must enter a number."
+#     assert (valuetocheck > 0), "Value entered must be greater than 0" 
+#     if valuetocheck > 4: 
+#         print("Value is greater than 4")
+
+# var = int(input("Enter a number greater than 0: ")) 
+# checkvalue(var)
+
+
+# import os
+
+# def new_user():
+#     confirm = "N"
+#     while confirm != 'Y':
+#         username = input("Enter the username ")
+#         print("use the username '" + username + "'? Y/N")
+#         confirm = input().upper()
+#     os.system("sudo adduser " + username)
+    
+# def del_user():
+#     confirm = "N"
+#     while confirm != 'Y':
+#         username = input("Enter the username ")
+#         print("use the username '" + username + "'? Y/N")
+#         confirm = input().upper()
+#     os.system("sudo userdel " + username)
+    
+# #new_user()
+# del_user()
